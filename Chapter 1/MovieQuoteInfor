@@ -1,1 +1,8 @@
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Nothing's more hateful than failing to protect the one you love.");
+		System.out.println("- Brienne of Tarth's, Game of Thrones");
+	}
+}
 
