@@ -20,8 +20,6 @@ public class SammysRentalPrice {
 
         int totalCost = (hours * hourlyRate) + extraMinutes;
 
-        System.out.println("Hours: " + hours);
-        System.out.println("Minutes: " + extraMinutes);
         System.out.println("Total price: $" + totalCost);
         
         input.close();
