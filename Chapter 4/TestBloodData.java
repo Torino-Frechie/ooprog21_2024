@@ -1,53 +1,36 @@
-class BloodData {
+import java.util.Scanner;
+
+public class TestBloodData {
     private String bloodType;
     private String rhFactor;
 
-    public BloodData() {
-        this.bloodType = "O";
-        this.rhFactor = "+";
-    }
-
-    public BloodData(String bloodType, String rhFactor) {
-        this.bloodType = bloodType;
-        this.rhFactor = rhFactor;
-    }
-
-    public String getBloodType() {
-        return bloodType;
-    }
-
-    public void setBloodType(String bloodType) {
-        this.bloodType = bloodType;
-    }
-
-    public String getRhFactor() {
-        return rhFactor;
-    }
-
-    public void setRhFactor(String rhFactor) {
-        this.rhFactor = rhFactor;
-    }
-
-    public void defaultPatient() {
+    public TestBloodData() {
         this.bloodType = "A";
         this.rhFactor = "-";
     }
 
-    public void displayBloodInfo() {
-        System.out.println("Blood Type: " + bloodType + rhFactor);
+    public TestBloodData(String bloodType, String rhFactor) {
+        this.bloodType = bloodType;
+        this.rhFactor = rhFactor;
     }
-}
 
-public class TestBloodData {
+    public void displayBloodInfo() {
+        System.out.println("Your blood type is: " + bloodType);
+        System.out.println("Your Rh Factor is: " + rhFactor);
+    }
+
     public static void main(String[] args) {
-        BloodData patient = new BloodData();
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter Blood Type: ");
+        String bloodType = scanner.nextLine();
+
+        System.out.print("Enter Rh Factor: ");
+        String rhFactor = scanner.nextLine();
+
+        TestBloodData patient = new TestBloodData(bloodType, rhFactor);
         patient.displayBloodInfo();
 
-        patient.setBloodType("AB");
-        patient.setRhFactor("-");
-        patient.displayBloodInfo();
-
-        patient.defaultPatient();
-        patient.displayBloodInfo();
+        scanner.close();
     }
 }
